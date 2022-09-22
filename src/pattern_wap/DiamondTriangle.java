@@ -29,20 +29,21 @@ public void diamondtriangle1(int n) {
 public void diamondtriangle2(int n) {
 		
 		for(int i=0;i<n;i++) {
-			for(int j=n;j>i;j--) {
-				if(j>1) {
+			for(int j=n;j>0;j--) {
+				if(j>i) {
 					System.out.print(" ");
 				}
 				else System.out.print("* ");
-			System.out.println();
 			}
+			System.out.println();
 	}
-		for(int i=0;i<n;i++) {
-			for(int j=0; j<i; j++) {
-				if(j<1) {
-					System.out.print("* ");
+		
+		for(int i=0;i>n;i++) {
+			for(int j=i; j<n; j++) {
+				if(j>i) {
+					System.out.print("1 ");
 				}
-				else System.out.print(" ");
+				else System.out.print("* ");
 			}
 			System.out.println();
 		}
@@ -55,6 +56,7 @@ public void diamondtriangle2(int n) {
 		System.out.println("\n Diamond Triangle : ");
 		dt.diamondtriangle1(6);
 		
+		System.out.println("\n Diamond Triangle2 : ");
 		dt.diamondtriangle2(6);
 
 	}
